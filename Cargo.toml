@@ -12,5 +12,6 @@ exclude = ["assets/*"]
 rust-version = "1.86.0"
 
 [dependencies]
-ratatui = "^0.30.0-beta.0"
-
+# ratatui-core = { version = "0.1.0-beta.0" }
+ratatui-core = { git = "https://github.com/benjajaja/ratatui.git", rev = "e3fd6976" }
+unicode-width = ">=0.2.0, <=0.2.2"
