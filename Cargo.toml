@@ -1,0 +1,16 @@
+[package]
+name = "tui-link"
+version = "0.0.1"
+edition = "2024"
+authors = ["Benjamin Große <ste3ls@gmail.com>"]
+description = "A link widget for Ratatui TUI programs"
+repository = "https://github.com/benjajaja/tui-link"
+homepage = "https://github.com/benjajaja/tui-link"
+readme = "README.md"
+license = "GPL-3.0-or-later"
+exclude = ["assets/*"]
+rust-version = "1.86.0"
+
+[dependencies]
+ratatui = "^0.30.0-beta.0"
+
