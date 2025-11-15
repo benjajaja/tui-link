@@ -25,10 +25,12 @@ impl<'a> Link<'a> {
     /// # Examples
     ///
     /// ```
-    /// use ratatui::widgets::{Link, LinkSize};
+    /// use tui_link::Link;
+    /// use ratatui::text::Span;
+    /// use ratatui::prelude::Stylize;
     ///
     /// let logo = Link::new(
-    ///     Span::from("ratatui website").fg(Color::Blue).underlined(),
+    ///     Span::from("ratatui website").blue().underlined(),
     ///     "https://ratatui.rs",
     /// );
     /// ```
@@ -42,7 +44,7 @@ impl<'a> Widget for Link<'a> {
         let Some(cell) = buf.cell_mut(area) else {
             return;
         };
-        let capacity = 7 + self.url.len() + 2 + self.text.content.len() + 8;
+        let capacity = 7 + self.url.width() + 2 + self.text.content.width() + 8;
         let mut s = String::with_capacity(capacity);
         s.push_str("\x1b]8;;");
         s.push_str(&self.url);
@@ -57,6 +59,7 @@ impl<'a> Widget for Link<'a> {
 
 #[cfg(test)]
 mod tests {
+    use ratatui::prelude::*;
     use rstest::rstest;
 
     use super::*;
@@ -65,5 +68,17 @@ mod tests {
     fn new() {
         let link = Link::new(Span::from("text"), "url");
         assert_eq!(link.text.content, "text");
+        assert_eq!(link.url, "url");
+    }
+
+    #[rstest]
+    fn escape() {
+        let link = Link::new(Span::from("Link🔗"), "url");
+        let area = Rect::new(0, 0, 10, 1);
+        let mut buf = Buffer::empty(area);
+        link.render(area, &mut buf);
+        let cell = buf.cell((0, 0)).unwrap();
+        assert_eq!("\x1b]8;;url\x1b\\Link🔗\x1b]8;;\x1b\\", cell.symbol());
+        assert_eq!(CellDiffOption::ForcedWidth(6), cell.diff_option);
     }
 }
