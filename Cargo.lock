@@ -913,7 +913,7 @@ checksum = "ec0be4795e2f6a28069bec0b5ff3e2ac9bafc99e6a9a7dc3547996c5c816922c"
 [[package]]
 name = "ratatui"
 version = "0.30.0-beta.0"
-source = "git+https://github.com/benjajaja/ratatui.git?rev=e3fd6976#e3fd69762453a0f7e1a47d3906721109aeae0d8a"
+source = "git+https://github.com/benjajaja/ratatui.git?rev=fe4358a8#fe4358a80c1fbd8c90cac3f3dfebf5d4cd16d3e4"
 dependencies = [
  "instability",
  "ratatui-core",
@@ -926,7 +926,7 @@ dependencies = [
 [[package]]
 name = "ratatui-core"
 version = "0.1.0-beta.0"
-source = "git+https://github.com/benjajaja/ratatui.git?rev=e3fd6976#e3fd69762453a0f7e1a47d3906721109aeae0d8a"
+source = "git+https://github.com/benjajaja/ratatui.git?rev=fe4358a8#fe4358a80c1fbd8c90cac3f3dfebf5d4cd16d3e4"
 dependencies = [
  "bitflags 2.10.0",
  "compact_str",
@@ -945,7 +945,7 @@ dependencies = [
 [[package]]
 name = "ratatui-crossterm"
 version = "0.1.0-beta.0"
-source = "git+https://github.com/benjajaja/ratatui.git?rev=e3fd6976#e3fd69762453a0f7e1a47d3906721109aeae0d8a"
+source = "git+https://github.com/benjajaja/ratatui.git?rev=fe4358a8#fe4358a80c1fbd8c90cac3f3dfebf5d4cd16d3e4"
 dependencies = [
  "cfg-if",
  "crossterm",
@@ -956,7 +956,7 @@ dependencies = [
 [[package]]
 name = "ratatui-macros"
 version = "0.7.0-beta.0"
-source = "git+https://github.com/benjajaja/ratatui.git?rev=e3fd6976#e3fd69762453a0f7e1a47d3906721109aeae0d8a"
+source = "git+https://github.com/benjajaja/ratatui.git?rev=fe4358a8#fe4358a80c1fbd8c90cac3f3dfebf5d4cd16d3e4"
 dependencies = [
  "ratatui-core",
  "ratatui-widgets",
@@ -965,7 +965,7 @@ dependencies = [
 [[package]]
 name = "ratatui-termwiz"
 version = "0.1.0-beta.0"
-source = "git+https://github.com/benjajaja/ratatui.git?rev=e3fd6976#e3fd69762453a0f7e1a47d3906721109aeae0d8a"
+source = "git+https://github.com/benjajaja/ratatui.git?rev=fe4358a8#fe4358a80c1fbd8c90cac3f3dfebf5d4cd16d3e4"
 dependencies = [
  "ratatui-core",
  "termwiz",
@@ -974,7 +974,7 @@ dependencies = [
 [[package]]
 name = "ratatui-widgets"
 version = "0.3.0-beta.0"
-source = "git+https://github.com/benjajaja/ratatui.git?rev=e3fd6976#e3fd69762453a0f7e1a47d3906721109aeae0d8a"
+source = "git+https://github.com/benjajaja/ratatui.git?rev=fe4358a8#fe4358a80c1fbd8c90cac3f3dfebf5d4cd16d3e4"
 dependencies = [
  "bitflags 2.10.0",
  "hashbrown",

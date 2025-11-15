@@ -17,7 +17,7 @@ fn main() -> Result<(), std::io::Error> {
     let (text, url) = match (arg1.as_deref(), arg2.as_deref()) {
         (Some(text), Some(url)) => (text, url),
         (Some(text), None) => (text, "https://ratatui.rs"),
-        _ => ("Click me!", "https://ratatui.rs"),
+        _ => ("🔗Click me!", "https://ratatui.rs"),
     };
     terminal.draw(|frame| render(frame, (text, url)))?;
     ratatui::restore();
