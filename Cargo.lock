@@ -672,9 +672,9 @@ dependencies = [
 
 [[package]]
 name = "num-conv"
-version = "0.1.0"
+version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "51d515d32fb182ee37cda2ccdcb92950d6a3c2893aa280e540671c2cd0f3b1d9"
+checksum = "cf97ec579c3c42f953ef76dbf8d55ac91fb219dde70e49aa4a6b7d74e9919050"
 
 [[package]]
 name = "num-derive"
@@ -912,8 +912,8 @@ checksum = "ec0be4795e2f6a28069bec0b5ff3e2ac9bafc99e6a9a7dc3547996c5c816922c"
 
 [[package]]
 name = "ratatui"
-version = "0.30.0-beta.0"
-source = "git+https://github.com/benjajaja/ratatui.git?rev=fe4358a8#fe4358a80c1fbd8c90cac3f3dfebf5d4cd16d3e4"
+version = "0.30.0"
+source = "git+https://github.com/ratatui/ratatui.git?rev=9713828c838d567ec4d782869f1e2f267cc022b3#9713828c838d567ec4d782869f1e2f267cc022b3"
 dependencies = [
  "instability",
  "ratatui-core",
@@ -925,8 +925,8 @@ dependencies = [
 
 [[package]]
 name = "ratatui-core"
-version = "0.1.0-beta.0"
-source = "git+https://github.com/benjajaja/ratatui.git?rev=fe4358a8#fe4358a80c1fbd8c90cac3f3dfebf5d4cd16d3e4"
+version = "0.1.0"
+source = "git+https://github.com/ratatui/ratatui.git?rev=9713828c838d567ec4d782869f1e2f267cc022b3#9713828c838d567ec4d782869f1e2f267cc022b3"
 dependencies = [
  "bitflags 2.10.0",
  "compact_str",
@@ -944,8 +944,8 @@ dependencies = [
 
 [[package]]
 name = "ratatui-crossterm"
-version = "0.1.0-beta.0"
-source = "git+https://github.com/benjajaja/ratatui.git?rev=fe4358a8#fe4358a80c1fbd8c90cac3f3dfebf5d4cd16d3e4"
+version = "0.1.0"
+source = "git+https://github.com/ratatui/ratatui.git?rev=9713828c838d567ec4d782869f1e2f267cc022b3#9713828c838d567ec4d782869f1e2f267cc022b3"
 dependencies = [
  "cfg-if",
  "crossterm",
@@ -955,8 +955,8 @@ dependencies = [
 
 [[package]]
 name = "ratatui-macros"
-version = "0.7.0-beta.0"
-source = "git+https://github.com/benjajaja/ratatui.git?rev=fe4358a8#fe4358a80c1fbd8c90cac3f3dfebf5d4cd16d3e4"
+version = "0.7.0"
+source = "git+https://github.com/ratatui/ratatui.git?rev=9713828c838d567ec4d782869f1e2f267cc022b3#9713828c838d567ec4d782869f1e2f267cc022b3"
 dependencies = [
  "ratatui-core",
  "ratatui-widgets",
@@ -964,8 +964,8 @@ dependencies = [
 
 [[package]]
 name = "ratatui-termwiz"
-version = "0.1.0-beta.0"
-source = "git+https://github.com/benjajaja/ratatui.git?rev=fe4358a8#fe4358a80c1fbd8c90cac3f3dfebf5d4cd16d3e4"
+version = "0.1.0"
+source = "git+https://github.com/ratatui/ratatui.git?rev=9713828c838d567ec4d782869f1e2f267cc022b3#9713828c838d567ec4d782869f1e2f267cc022b3"
 dependencies = [
  "ratatui-core",
  "termwiz",
@@ -973,8 +973,8 @@ dependencies = [
 
 [[package]]
 name = "ratatui-widgets"
-version = "0.3.0-beta.0"
-source = "git+https://github.com/benjajaja/ratatui.git?rev=fe4358a8#fe4358a80c1fbd8c90cac3f3dfebf5d4cd16d3e4"
+version = "0.3.0"
+source = "git+https://github.com/ratatui/ratatui.git?rev=9713828c838d567ec4d782869f1e2f267cc022b3#9713828c838d567ec4d782869f1e2f267cc022b3"
 dependencies = [
  "bitflags 2.10.0",
  "hashbrown",
@@ -1357,24 +1357,24 @@ dependencies = [
 
 [[package]]
 name = "time"
-version = "0.3.44"
+version = "0.3.47"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "91e7d9e3bb61134e77bde20dd4825b97c010155709965fedf0f49bb138e52a9d"
+checksum = "743bd48c283afc0388f9b8827b976905fb217ad9e647fae3a379a9283c4def2c"
 dependencies = [
  "deranged",
  "libc",
  "num-conv",
  "num_threads",
  "powerfmt",
- "serde",
+ "serde_core",
  "time-core",
 ]
 
 [[package]]
 name = "time-core"
-version = "0.1.6"
+version = "0.1.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "40868e7c1d2f0b8d73e4a8c7f0ff63af4f6d19be117e90bd73eb1d62cf831c6b"
+checksum = "7694e1cfe791f8d31026952abf09c69ca6f6fa4e1a1229e18988f06a04a12dca"
 
 [[package]]
 name = "toml_datetime"

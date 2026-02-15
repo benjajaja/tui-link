@@ -3,6 +3,8 @@
 
 extern crate alloc;
 
+use core::num::NonZero;
+
 use alloc::string::String;
 
 use ratatui_core::buffer::Buffer;
@@ -53,7 +55,9 @@ impl<'a> Widget for Link<'a> {
         s.push_str("\x1b]8;;\x1b\\");
         cell.set_symbol(&s);
         cell.set_style(self.text.style);
-        cell.set_diff_option(CellDiffOption::ForcedWidth(self.text.content.width()));
+        cell.set_diff_option(CellDiffOption::ForcedWidth(
+            NonZero::new(self.text.content.width()).unwrap_or_else(|| NonZero::new(1).unwrap()),
+        ));
     }
 }
 
@@ -79,6 +83,9 @@ mod tests {
         link.render(area, &mut buf);
         let cell = buf.cell((0, 0)).unwrap();
         assert_eq!("\x1b]8;;url\x1b\\Link🔗\x1b]8;;\x1b\\", cell.symbol());
-        assert_eq!(CellDiffOption::ForcedWidth(6), cell.diff_option);
+        assert_eq!(
+            CellDiffOption::ForcedWidth(NonZero::new(6).unwrap()),
+            cell.diff_option
+        );
     }
 }
